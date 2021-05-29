@@ -1,5 +1,5 @@
 # Digital garden Jekyll template
-Demo: [garden.megu.space](https://garden.megu.space)
+Demo: [garden.megu.space/test](https://garden.megu.space/test)
 
 Powered by: Github --> DeployHQ --> Dreamhost
 
@@ -19,7 +19,7 @@ Powered by: Github --> DeployHQ --> Dreamhost
 - Fixed up `site.baseurl` configuration in `head.html` including a separate URL for `/` and also used `strip` to remove extra whitespace from meta description
 - Fixed code block responsivity
 - Enabled [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages) for tables
-	- replaced footnote internal link class for new html 
+	- replaced footnote internal link class for new html
 
 ### Apache Specific Updates
 - Need to force `.html` extension for this to work on Dreamhost

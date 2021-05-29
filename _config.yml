@@ -1,9 +1,9 @@
-title:               garden.megu.space
+title:               'garden test'
 # Change url to your root domain or subdomain including https://
 url:                 'https://garden.megu.space'
 
 # Change baseurl to your garden directory so the internal link generator creates proper relative paths. Leave blank if you're not using a subdirectory.
-baseurl:             ''
+baseurl:             'test'
 
 # https://jekyllrb.com/docs/configuration/options/
 timezone: America/Los_Angeles
