@@ -9,6 +9,8 @@ class BidirectionalLinksGenerator < Jekyll::Generator
 
     all_docs = all_notes + all_pages
 
+    base_url = site.config['baseurl'] || {}
+
     link_extension = !!site.config["use_html_extension"] ? '.html' : ''
 
     # Convert all Wiki/Roam-style double-bracket link syntax to plain HTML
@@ -18,9 +20,9 @@ class BidirectionalLinksGenerator < Jekyll::Generator
         title_from_filename = File.basename(
           note_potentially_linked_to.basename,
           File.extname(note_potentially_linked_to.basename)
-        ).gsub('_', ' ').gsub('-', ' ').capitalize
+        ).gsub('_', ' ').capitalize
 
-        new_href = "#{note_potentially_linked_to.url}#{link_extension}"
+        new_href = "#{base_url}#{note_potentially_linked_to.url}#{link_extension}"
         anchor_tag = "<a class='internal-link' href='#{new_href}'>\\1</a>"
 
         # Replace double-bracketed links with label using note title
@@ -76,7 +78,7 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       # Nodes: Graph
       graph_nodes << {
         id: note_id_from_note(current_note),
-        path: "#{current_note.url}#{link_extension}",
+        path: "#{base_url}#{current_note.url}#{link_extension}",
         label: current_note.data['title'],
       } unless current_note.path.include?('_notes/index.html')
 

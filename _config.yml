@@ -3,7 +3,7 @@ title:               'garden test'
 url:                 'https://garden.megu.space'
 
 # Change baseurl to your garden directory so the internal link generator creates proper relative paths. Leave blank if you're not using a subdirectory.
-baseurl:             'test'
+baseurl:             '/test'
 
 # https://jekyllrb.com/docs/configuration/options/
 timezone: America/Los_Angeles

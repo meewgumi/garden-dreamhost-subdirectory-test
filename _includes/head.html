@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
 
   {% if site.use_html_extension == false %}
-  <link rel="canonical" href="{{ site.url }}{% if site.baseurl != null %}/{{ site.baseurl }}{%- endif -%}{{ page.url }}.html">
+  <link rel="canonical" href="{{ site.url }}{% if site.baseurl != null %}{{ site.baseurl }}{%- endif -%}{{ page.url }}.html">
   {% endif %}
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,13 +35,13 @@
   {% endif %}
 
   {% if page.url == "/" %}
-  <meta property="og:url" content="{{ site.url }}{% if site.baseurl != null  %}/{{ site.baseurl }}{%- endif -%}">
+  <meta property="og:url" content="{{ site.url }}{% if site.baseurl != null  %}{{ site.baseurl }}{%- endif -%}">
   {% else %}
-  <meta property="og:url" content="{{ site.url }}{% if site.baseurl != null  %}/{{ site.baseurl }}{%- endif -%}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
+  <meta property="og:url" content="{{ site.url }}{% if site.baseurl != null  %}{{ site.baseurl }}{%- endif -%}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
   {% endif %}
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{% if site.baseurl != null %}/{{ site.baseurl }}{%- endif -%}{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}{% if site.baseurl != null %}{{ site.baseurl }}{%- endif -%}{{ page.image }}">
   {% endif %}
 
   <title>
